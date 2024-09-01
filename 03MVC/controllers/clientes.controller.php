@@ -8,7 +8,7 @@ if ($method == "OPTIONS") {
     die();
 }
 
-//TODO: controlador de clientes Tienda Cel@g
+//TODO: controlador de clientes
 
 require_once('../models/clientes.model.php');
 error_reporting(0);

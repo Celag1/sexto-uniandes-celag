@@ -1,5 +1,5 @@
 <?php
-//TODO: Clase de Provedores Tienda Cel@g
+//TODO: Clase de Provedores
 require_once('../config/config.php');
 class Provedores
 {

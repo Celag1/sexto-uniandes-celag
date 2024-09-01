@@ -1,5 +1,5 @@
 <?php
-// TODO: Clase de Clientes Tienda Cel@g
+// TODO: Clase de Clientes
 require_once('../config/config.php');
 
 class Clientes

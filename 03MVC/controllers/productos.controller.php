@@ -8,7 +8,7 @@ if ($method == "OPTIONS") {
     die();
 }
 
-//TODO: Controlador de productos Tienda Cel@g
+//TODO: Controlador de productos
 
 require_once('../models/productos.model.php');
 error_reporting(0);
