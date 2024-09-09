@@ -8,18 +8,30 @@ if ($method == "OPTIONS") {
     die();
 }
 
-//TODO: controlador de clientes
+//TODO: controlador de clientes Tienda Cel@g
 
 require_once('../models/clientes.model.php');
 error_reporting(0);
 $clientes = new Clientes;
 
 switch ($_GET["op"]) {
-    //TODO: operaciones de clientes
-
+        //TODO: operaciones de clientes
+    case 'buscar': // Procedimiento para cargar todos los datos de los clientes
+        if (!isset($_POST["texto"])) {
+            echo json_encode(["error" => "Client ID not specified."]);
+            exit();
+        }
+        $texto = intval($_POST["texto"]);
+        $datos = array();
+        $datos = $clientes->buscar($texto);
+        while ($row = mysqli_fetch_assoc($datos)) {
+            $todos[] = $row;
+        }
+        echo json_encode($todos);
+        break;
     case 'todos': // Procedimiento para cargar todos los datos de los clientes
-        $datos = array(); 
-        $datos = $clientes->todos(); 
+        $datos = array();
+        $datos = $clientes->todos();
         while ($row = mysqli_fetch_assoc($datos)) {
             $todos[] = $row;
         }
