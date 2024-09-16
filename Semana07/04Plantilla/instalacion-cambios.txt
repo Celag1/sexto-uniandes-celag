@@ -1,0 +1,28 @@
+npm install --force
+npm install jspdf jspdf-autotable html2canvas --force
+
+
+Modificar tsconfig.json:
+Agregar las siguientes línea en la sección compilerOptions:
+
+	"types": ["babel__core"],
+    	"typeRoots": ["node_modules/@types"]
+
+
+Modificar angular.json
+Agregar a allowedCommonJsDependencies dentro de la sección build -> options
+
+"build": {
+  "builder": "@angular-devkit/build-angular:browser",
+  "options": {
+    "allowedCommonJsDependencies": [
+      "bezier-easing",
+      "apexcharts",
+      "canvg",
+      "sweetalert2",
+      "html2canvas",
+      "jspdf-autotable",
+      "rgbcolor",
+      "raf"
+    ],
+   
